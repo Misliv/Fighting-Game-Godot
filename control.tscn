@@ -1,0 +1,45 @@
+[gd_scene load_steps=2 format=3 uid="uid://ds7hku3gpflw5"]
+
+[ext_resource type="Script" path="res://MainMenu.gd" id="1_ntlq4"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ntlq4")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 525.0
+offset_top = 200.0
+offset_right = 595.0
+offset_bottom = 301.0
+scale = Vector2(2, 2)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Training" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Training"
+
+[node name="Versus" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Versus
+"
+
+[node name="Options" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Options"
+
+[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Quit"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Training" to="." method="_on_training_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Versus" to="." method="_on_versus_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
