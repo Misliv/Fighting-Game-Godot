@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://dcqc6reyhfsr2"]
+[gd_scene load_steps=12 format=3 uid="uid://dcqc6reyhfsr2"]
 
 [ext_resource type="Texture2D" uid="uid://cou3f25v48w4k" path="res://Sprites/Hazama/Idle/hz000_00.png" id="1_5rjjq"]
+[ext_resource type="Script" path="res://Scenes/Hazama.gd" id="1_pj8g5"]
 [ext_resource type="Texture2D" uid="uid://vj5vfv65w1yw" path="res://Sprites/Hazama/Idle/hz000_01.png" id="2_ymmyy"]
 [ext_resource type="Texture2D" uid="uid://bouex1iqak8f" path="res://Sprites/Hazama/Idle/hz000_02.png" id="3_me62f"]
 [ext_resource type="Texture2D" uid="uid://nw80nw74dnrf" path="res://Sprites/Hazama/Idle/hz000_03.png" id="4_fy6p3"]
@@ -53,8 +54,11 @@ offset_bottom = 8.0
 text = "Test
 "
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="Hazama" type="CharacterBody2D" parent="."]
+script = ExtResource("1_pj8g5")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Hazama"]
 sprite_frames = SubResource("SpriteFrames_wqanu")
-frame_progress = 0.861726
+frame_progress = 0.53804
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hazama"]
