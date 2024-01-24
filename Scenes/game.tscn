@@ -1,15 +1,15 @@
 [gd_scene load_steps=12 format=3 uid="uid://dcqc6reyhfsr2"]
 
-[ext_resource type="Texture2D" uid="uid://cou3f25v48w4k" path="res://Sprites/Hazama/Idle/hz000_00.png" id="1_5rjjq"]
+[ext_resource type="Texture2D" uid="uid://c6cxjkk6paxbm" path="res://Sprites/Hazama/Idle/hz000_00.png" id="1_5rjjq"]
 [ext_resource type="Script" path="res://Scenes/Hazama.gd" id="1_pj8g5"]
-[ext_resource type="Texture2D" uid="uid://vj5vfv65w1yw" path="res://Sprites/Hazama/Idle/hz000_01.png" id="2_ymmyy"]
-[ext_resource type="Texture2D" uid="uid://bouex1iqak8f" path="res://Sprites/Hazama/Idle/hz000_02.png" id="3_me62f"]
-[ext_resource type="Texture2D" uid="uid://nw80nw74dnrf" path="res://Sprites/Hazama/Idle/hz000_03.png" id="4_fy6p3"]
-[ext_resource type="Texture2D" uid="uid://d3h4ksxomwm8b" path="res://Sprites/Hazama/Idle/hz000_04.png" id="5_vfi62"]
-[ext_resource type="Texture2D" uid="uid://cq257kjqxt67o" path="res://Sprites/Hazama/Idle/hz000_05.png" id="6_o2s22"]
-[ext_resource type="Texture2D" uid="uid://bqmlxxl7lp0sf" path="res://Sprites/Hazama/Idle/hz000_06.png" id="7_hx0ok"]
-[ext_resource type="Texture2D" uid="uid://ct0hkdo7tlmlh" path="res://Sprites/Hazama/Idle/hz000_07.png" id="8_3gxsj"]
-[ext_resource type="Texture2D" uid="uid://7r3lvnrgh45a" path="res://Sprites/Hazama/Idle/hz000_08.png" id="9_fx48m"]
+[ext_resource type="Texture2D" uid="uid://dytgmwx812q8h" path="res://Sprites/Hazama/Idle/hz000_01.png" id="2_ymmyy"]
+[ext_resource type="Texture2D" uid="uid://71uu0l35i4fu" path="res://Sprites/Hazama/Idle/hz000_02.png" id="3_me62f"]
+[ext_resource type="Texture2D" uid="uid://bmm047v4wvoej" path="res://Sprites/Hazama/Idle/hz000_03.png" id="4_fy6p3"]
+[ext_resource type="Texture2D" uid="uid://dhj545l4w4nd8" path="res://Sprites/Hazama/Idle/hz000_04.png" id="5_vfi62"]
+[ext_resource type="Texture2D" uid="uid://cy2kgayu0a5nl" path="res://Sprites/Hazama/Idle/hz000_05.png" id="6_o2s22"]
+[ext_resource type="Texture2D" uid="uid://bwxr30e0wdan6" path="res://Sprites/Hazama/Idle/hz000_06.png" id="7_hx0ok"]
+[ext_resource type="Texture2D" uid="uid://cjpqp04dm10fd" path="res://Sprites/Hazama/Idle/hz000_07.png" id="8_3gxsj"]
+[ext_resource type="Texture2D" uid="uid://bed0v2qje7ytq" path="res://Sprites/Hazama/Idle/hz000_08.png" id="9_fx48m"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wqanu"]
 animations = [{
@@ -62,3 +62,6 @@ sprite_frames = SubResource("SpriteFrames_wqanu")
 frame_progress = 0.53804
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hazama"]
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 2
