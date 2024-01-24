@@ -1,0 +1,60 @@
+[gd_scene load_steps=11 format=3 uid="uid://dcqc6reyhfsr2"]
+
+[ext_resource type="Texture2D" uid="uid://cou3f25v48w4k" path="res://Sprites/Hazama/Idle/hz000_00.png" id="1_5rjjq"]
+[ext_resource type="Texture2D" uid="uid://vj5vfv65w1yw" path="res://Sprites/Hazama/Idle/hz000_01.png" id="2_ymmyy"]
+[ext_resource type="Texture2D" uid="uid://bouex1iqak8f" path="res://Sprites/Hazama/Idle/hz000_02.png" id="3_me62f"]
+[ext_resource type="Texture2D" uid="uid://nw80nw74dnrf" path="res://Sprites/Hazama/Idle/hz000_03.png" id="4_fy6p3"]
+[ext_resource type="Texture2D" uid="uid://d3h4ksxomwm8b" path="res://Sprites/Hazama/Idle/hz000_04.png" id="5_vfi62"]
+[ext_resource type="Texture2D" uid="uid://cq257kjqxt67o" path="res://Sprites/Hazama/Idle/hz000_05.png" id="6_o2s22"]
+[ext_resource type="Texture2D" uid="uid://bqmlxxl7lp0sf" path="res://Sprites/Hazama/Idle/hz000_06.png" id="7_hx0ok"]
+[ext_resource type="Texture2D" uid="uid://ct0hkdo7tlmlh" path="res://Sprites/Hazama/Idle/hz000_07.png" id="8_3gxsj"]
+[ext_resource type="Texture2D" uid="uid://7r3lvnrgh45a" path="res://Sprites/Hazama/Idle/hz000_08.png" id="9_fx48m"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wqanu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_5rjjq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ymmyy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_me62f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_fy6p3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_vfi62")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_o2s22")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_hx0ok")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_3gxsj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_fx48m")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Game" type="Node2D"]
+
+[node name="Button" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Test
+"
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+sprite_frames = SubResource("SpriteFrames_wqanu")
+frame_progress = 0.861726

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cjghdnaex7ln8"]
 
-[ext_resource type="Script" path="res://CharacterSelect.gd" id="1_lpcs3"]
+[ext_resource type="Script" path="res://Scripts/CharacterSelect.gd" id="1_dks6p"]
 
 [sub_resource type="GDScript" id="GDScript_e1pxn"]
 script/source = "extends Button
@@ -17,7 +17,7 @@ func _process(delta):
 "
 
 [node name="CharacterSelect" type="Node2D"]
-script = ExtResource("1_lpcs3")
+script = ExtResource("1_dks6p")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 offset_right = 40.0
@@ -26,13 +26,14 @@ offset_bottom = 40.0
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="characterselect" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "characterselect"
 
-[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="back" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "back"
 script = SubResource("GDScript_e1pxn")
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/characterselect" to="." method="_on_characterselect_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/back" to="." method="_on_back_pressed"]
