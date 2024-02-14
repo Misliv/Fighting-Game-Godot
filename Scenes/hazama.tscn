@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dmwph2vr6kcj7"]
+[gd_scene load_steps=14 format=3 uid="uid://dk6c6q2mbvyqh"]
 
 [ext_resource type="Script" path="res://Scenes/Hazama.gd" id="1_w71c2"]
 [ext_resource type="PackedScene" uid="uid://o0rft4hppc6i" path="res://Scenes/animated_sprite_2d.tscn" id="2_oyo1y"]
