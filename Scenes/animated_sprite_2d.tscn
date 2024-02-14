@@ -1,0 +1,51 @@
+[gd_scene load_steps=11 format=3 uid="uid://o0rft4hppc6i"]
+
+[ext_resource type="Texture2D" uid="uid://cou3f25v48w4k" path="res://Sprites/Hazama/Idle/hz000_00.png" id="1_uj08w"]
+[ext_resource type="Texture2D" uid="uid://vj5vfv65w1yw" path="res://Sprites/Hazama/Idle/hz000_01.png" id="2_5fy78"]
+[ext_resource type="Texture2D" uid="uid://bouex1iqak8f" path="res://Sprites/Hazama/Idle/hz000_02.png" id="3_yrwgs"]
+[ext_resource type="Texture2D" uid="uid://nw80nw74dnrf" path="res://Sprites/Hazama/Idle/hz000_03.png" id="4_puvsu"]
+[ext_resource type="Texture2D" uid="uid://d3h4ksxomwm8b" path="res://Sprites/Hazama/Idle/hz000_04.png" id="5_733yp"]
+[ext_resource type="Texture2D" uid="uid://cq257kjqxt67o" path="res://Sprites/Hazama/Idle/hz000_05.png" id="6_2vweu"]
+[ext_resource type="Texture2D" uid="uid://bqmlxxl7lp0sf" path="res://Sprites/Hazama/Idle/hz000_06.png" id="7_lb7xb"]
+[ext_resource type="Texture2D" uid="uid://ct0hkdo7tlmlh" path="res://Sprites/Hazama/Idle/hz000_07.png" id="8_5s3o1"]
+[ext_resource type="Texture2D" uid="uid://7r3lvnrgh45a" path="res://Sprites/Hazama/Idle/hz000_08.png" id="9_y8luy"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wqanu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_uj08w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_5fy78")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_yrwgs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_puvsu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_733yp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_2vweu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_lb7xb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_5s3o1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_y8luy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_wqanu")
+frame_progress = 0.53804

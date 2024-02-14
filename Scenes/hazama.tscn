@@ -1,0 +1,65 @@
+[gd_scene load_steps=14 format=3 uid="uid://dmwph2vr6kcj7"]
+
+[ext_resource type="Script" path="res://Scenes/Hazama.gd" id="1_w71c2"]
+[ext_resource type="PackedScene" uid="uid://o0rft4hppc6i" path="res://Scenes/animated_sprite_2d.tscn" id="2_oyo1y"]
+[ext_resource type="Texture2D" uid="uid://cou3f25v48w4k" path="res://Sprites/Hazama/Idle/hz000_00.png" id="3_cvopj"]
+[ext_resource type="Texture2D" uid="uid://vj5vfv65w1yw" path="res://Sprites/Hazama/Idle/hz000_01.png" id="4_vfmku"]
+[ext_resource type="Texture2D" uid="uid://bouex1iqak8f" path="res://Sprites/Hazama/Idle/hz000_02.png" id="5_n3g26"]
+[ext_resource type="Texture2D" uid="uid://nw80nw74dnrf" path="res://Sprites/Hazama/Idle/hz000_03.png" id="6_pwdfj"]
+[ext_resource type="Texture2D" uid="uid://d3h4ksxomwm8b" path="res://Sprites/Hazama/Idle/hz000_04.png" id="7_u661w"]
+[ext_resource type="Texture2D" uid="uid://cq257kjqxt67o" path="res://Sprites/Hazama/Idle/hz000_05.png" id="8_087d5"]
+[ext_resource type="Texture2D" uid="uid://bqmlxxl7lp0sf" path="res://Sprites/Hazama/Idle/hz000_06.png" id="9_ji2lw"]
+[ext_resource type="Texture2D" uid="uid://ct0hkdo7tlmlh" path="res://Sprites/Hazama/Idle/hz000_07.png" id="10_w2m6l"]
+[ext_resource type="Texture2D" uid="uid://7r3lvnrgh45a" path="res://Sprites/Hazama/Idle/hz000_08.png" id="11_s4bxo"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1uag7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_cvopj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_vfmku")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_n3g26")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_pwdfj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_u661w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_087d5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ji2lw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_w2m6l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_s4bxo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iqb5s"]
+size = Vector2(183, 415.5)
+
+[node name="Hazama" type="CharacterBody2D"]
+script = ExtResource("1_w71c2")
+
+[node name="AnimatedSprite2D" parent="." instance=ExtResource("2_oyo1y")]
+position = Vector2(895, 381)
+sprite_frames = SubResource("SpriteFrames_1uag7")
+autoplay = "default"
+frame = 3
+frame_progress = 0.44867
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(828.5, 413.25)
+shape = SubResource("RectangleShape2D_iqb5s")
