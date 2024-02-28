@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://cpxwsj5tk2c5l"]
+[gd_scene load_steps=21 format=3 uid="uid://cpxwsj5tk2c5l"]
 
 [ext_resource type="Script" path="res://Scenes/Amane.gd" id="1_dag2w"]
 [ext_resource type="Texture2D" uid="uid://creh4msguyard" path="res://Sprites/Amane/Idle/am000_00.png" id="1_hv66w"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://6u2dw30xa7o2" path="res://Sprites/Amane/Idle/am000_13.png" id="14_8c2la"]
 [ext_resource type="Texture2D" uid="uid://bn67s82b3nrvm" path="res://Sprites/Amane/Idle/am000_14.png" id="15_4gnfy"]
 [ext_resource type="Texture2D" uid="uid://bjbpvyd63rggm" path="res://Sprites/Amane/Idle/am000_15.png" id="16_xrldu"]
+[ext_resource type="Script" path="res://Scripts/Hurtbox.gd" id="18_mqvve"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_x2x58"]
 animations = [{
@@ -86,6 +87,13 @@ sprite_frames = SubResource("SpriteFrames_x2x58")
 autoplay = "default"
 frame = 2
 frame_progress = 0.55428
+
+[node name="Hurtbox" type="Area2D" parent="AnimatedSprite2D"]
+script = ExtResource("18_mqvve")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Hurtbox"]
+position = Vector2(-229, 107)
+shape = SubResource("RectangleShape2D_w2j5r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-229, 107)

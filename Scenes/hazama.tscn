@@ -1,19 +1,28 @@
-[gd_scene load_steps=15 format=3 uid="uid://dk6c6q2mbvyqh"]
+[gd_scene load_steps=16 format=3 uid="uid://dk6c6q2mbvyqh"]
 
 [ext_resource type="Script" path="res://Scripts/Hazama.gd" id="1_c4y6u"]
 [ext_resource type="PackedScene" uid="uid://o0rft4hppc6i" path="res://Scenes/animated_sprite_2d.tscn" id="2_oyo1y"]
-[ext_resource type="Texture2D" uid="uid://c6cxjkk6paxbm" path="res://Sprites/Hazama/Idle/hz000_00.png" id="3_cvopj"]
-[ext_resource type="Texture2D" uid="uid://dytgmwx812q8h" path="res://Sprites/Hazama/Idle/hz000_01.png" id="4_vfmku"]
-[ext_resource type="Texture2D" uid="uid://71uu0l35i4fu" path="res://Sprites/Hazama/Idle/hz000_02.png" id="5_n3g26"]
-[ext_resource type="Texture2D" uid="uid://bmm047v4wvoej" path="res://Sprites/Hazama/Idle/hz000_03.png" id="6_pwdfj"]
-[ext_resource type="Texture2D" uid="uid://dhj545l4w4nd8" path="res://Sprites/Hazama/Idle/hz000_04.png" id="7_u661w"]
-[ext_resource type="Texture2D" uid="uid://cy2kgayu0a5nl" path="res://Sprites/Hazama/Idle/hz000_05.png" id="8_087d5"]
-[ext_resource type="Texture2D" uid="uid://bwxr30e0wdan6" path="res://Sprites/Hazama/Idle/hz000_06.png" id="9_ji2lw"]
-[ext_resource type="Texture2D" uid="uid://cjpqp04dm10fd" path="res://Sprites/Hazama/Idle/hz000_07.png" id="10_w2m6l"]
-[ext_resource type="Texture2D" uid="uid://bed0v2qje7ytq" path="res://Sprites/Hazama/Idle/hz000_08.png" id="11_s4bxo"]
+[ext_resource type="Texture2D" uid="uid://dypvm0xjm2l0h" path="res://Sprites/Hazama/5A/hz200_03.png" id="3_2xeeq"]
+[ext_resource type="Texture2D" uid="uid://b3nh6el6rhlx2" path="res://Sprites/Hazama/Idle/hz000_00.png" id="3_cvopj"]
+[ext_resource type="Texture2D" uid="uid://dsfbgg047c40w" path="res://Sprites/Hazama/Idle/hz000_01.png" id="4_vfmku"]
+[ext_resource type="Texture2D" uid="uid://bok381wqyw4fe" path="res://Sprites/Hazama/Idle/hz000_02.png" id="5_n3g26"]
+[ext_resource type="Texture2D" uid="uid://bo7e8n0e1ss4c" path="res://Sprites/Hazama/Idle/hz000_03.png" id="6_pwdfj"]
+[ext_resource type="Texture2D" uid="uid://t162ls6haxx5" path="res://Sprites/Hazama/Idle/hz000_04.png" id="7_u661w"]
+[ext_resource type="Texture2D" uid="uid://pw1vyxtiqbft" path="res://Sprites/Hazama/Idle/hz000_05.png" id="8_087d5"]
+[ext_resource type="Texture2D" uid="uid://cr2mpb3jqyg7b" path="res://Sprites/Hazama/Idle/hz000_06.png" id="9_ji2lw"]
+[ext_resource type="Texture2D" uid="uid://d4ebdk8i0xug8" path="res://Sprites/Hazama/Idle/hz000_07.png" id="10_w2m6l"]
+[ext_resource type="Texture2D" uid="uid://bs4hhi4n0nlvo" path="res://Sprites/Hazama/Idle/hz000_08.png" id="11_s4bxo"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1uag7"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_2xeeq")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("3_cvopj")
@@ -43,31 +52,36 @@ animations = [{
 "texture": ExtResource("11_s4bxo")
 }],
 "loop": true,
-"name": &"default",
+"name": &"idle",
 "speed": 10.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_iu3ur"]
-size = Vector2(137, 48)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iqb5s"]
 size = Vector2(183, 415.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iu3ur"]
+size = Vector2(137, 48)
 
 [node name="Hazama" type="CharacterBody2D"]
 script = ExtResource("1_c4y6u")
 
 [node name="AnimatedSprite2D" parent="." instance=ExtResource("2_oyo1y")]
-position = Vector2(895, 381)
+position = Vector2(865, 427)
 sprite_frames = SubResource("SpriteFrames_1uag7")
-autoplay = "default"
+animation = &"idle"
+autoplay = "idle"
 frame_progress = 0.0
 
 [node name="Hitbox" type="Area2D" parent="AnimatedSprite2D"]
 
+[node name="CollisionShape" type="CollisionShape2D" parent="AnimatedSprite2D/Hitbox"]
+position = Vector2(-12, 41)
+shape = SubResource("RectangleShape2D_iqb5s")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Hitbox"]
-position = Vector2(-219, -73)
+position = Vector2(-143, -87)
 shape = SubResource("RectangleShape2D_iu3ur")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(828.5, 413.25)
+[node name="CollisionShape" type="CollisionShape2D" parent="."]
+position = Vector2(852, 469)
 shape = SubResource("RectangleShape2D_iqb5s")

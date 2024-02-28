@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dk6c6q2mbvyqh" path="res://Scenes/hazama.tscn" id="1_hveeu"]
 [ext_resource type="Texture2D" uid="uid://qkh0wakh811t" path="res://Images/Terrain (16x16).png" id="2_6cxxd"]
-[ext_resource type="PackedScene" uid="uid://cpxwsj5tk2c5l" path="res://Scenes/Amane.tscn" id="3_vplhg"]
+[ext_resource type="PackedScene" uid="uid://8rrx48qp6re7" path="res://amane_nishiki.tscn" id="3_lu3le"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pfv6o"]
 texture = ExtResource("2_6cxxd")
@@ -459,7 +459,7 @@ sources/0 = SubResource("TileSetAtlasSource_pfv6o")
 [node name="Game" type="Node2D"]
 
 [node name="Hazama" parent="." instance=ExtResource("1_hveeu")]
-position = Vector2(-5, -12)
+position = Vector2(54, -52)
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
@@ -468,5 +468,5 @@ tile_set = SubResource("TileSet_hpp2r")
 format = 2
 layer_0/tile_data = PackedInt32Array(851968, 131072, 0, 851969, 131072, 0, 851970, 131072, 0, 851971, 131072, 0, 851972, 131072, 0, 851973, 131072, 0, 851974, 131072, 0, 851975, 131072, 0, 851976, 131072, 0, 851977, 131072, 0, 851978, 131072, 0, 851979, 131072, 0, 851980, 131072, 0, 851981, 131072, 0, 851982, 131072, 0, 851983, 131072, 0, 851984, 131072, 0, 851985, 131072, 0, 851986, 131072, 0, 851987, 131072, 0, 851988, 131072, 0, 851989, 131072, 0, 851990, 131072, 0, 851991, 131072, 0)
 
-[node name="Amane" parent="." instance=ExtResource("3_vplhg")]
-position = Vector2(596, 306)
+[node name="AmaneNishiki" parent="." instance=ExtResource("3_lu3le")]
+position = Vector2(609, 316)
